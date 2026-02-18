@@ -56,19 +56,21 @@ const Header = () => {
                   </button>
                   {dropdownOpen && (
                     <ul className="dropdown-menu">
-                      {item.dropdown.map((subItem) => (
-                        <li key={subItem.path}>
-                          <NavLink
-                            to={subItem.path}
-                            className={({ isActive }) =>
-                              `dropdown-link ${isActive ? 'active' : ''}`
-                            }
-                            onClick={handleDropdownClose}
-                          >
-                            {subItem.label}
-                          </NavLink>
-                        </li>
-                      ))}
+                      <div className="dropdown-menu-inner">
+                        {item.dropdown.map((subItem) => (
+                          <li key={subItem.path}>
+                            <NavLink
+                              to={subItem.path}
+                              className={({ isActive }) =>
+                                `dropdown-link ${isActive ? 'active' : ''}`
+                              }
+                              onClick={handleDropdownClose}
+                            >
+                              {subItem.label}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </div>
                     </ul>
                   )}
                 </li>
