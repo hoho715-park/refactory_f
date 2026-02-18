@@ -121,6 +121,9 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-nav-header">
+          <HamburgerButton isOpen={mobileMenuOpen} onClick={handleMobileMenuToggle} />
+        </div>
         <ul className="mobile-menu">
           {menuItems.map((item) =>
             item.dropdown ? (
