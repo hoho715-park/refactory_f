@@ -46,11 +46,19 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  max-width: 1400px;
   height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 0 20px;
+  align-items: flex-start;
+  padding: 0 40px;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 20px;
+  }
 }
