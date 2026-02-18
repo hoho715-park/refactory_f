@@ -1,5 +1,7 @@
 /* src/index.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -27,4 +29,6 @@ body {
 
 body {
   min-height: 100vh;
+  background-color: #ffffff;
+  color: #333333;
 }

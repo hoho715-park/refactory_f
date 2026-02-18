@@ -5,3 +5,16 @@
   margin: 0;
   padding: 0;
 }
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.page-container h1 {
+  font-size: 2rem;
+  color: #333333;
+}
