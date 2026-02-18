@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/LOGO.png';
+import HamburgerButton from './HamburgerButton';
 import './header.css';
 
 const menuItems = [
@@ -21,6 +22,8 @@ const menuItems = [
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
     setDropdownOpen((prev) => !prev);
@@ -30,14 +33,31 @@ const Header = () => {
     setDropdownOpen(false);
   };
 
+  const handleMobileMenuToggle = () => {
+    setMobileMenuOpen((prev) => !prev);
+    if (mobileMenuOpen) {
+      setMobileDropdownOpen(false);
+    }
+  };
+
+  const handleMobileMenuClose = () => {
+    setMobileMenuOpen(false);
+    setMobileDropdownOpen(false);
+  };
+
+  const handleMobileDropdownToggle = () => {
+    setMobileDropdownOpen((prev) => !prev);
+  };
+
   return (
     <header className="header">
       <div className="header-container">
-        <NavLink to="/" className="header-logo">
+        <NavLink to="/" className="header-logo" onClick={handleMobileMenuClose}>
           <img src={logo} alt="RE:FACTORY Logo" />
         </NavLink>
 
-        <nav className="header-nav">
+        {/* Desktop Navigation */}
+        <nav className="header-nav desktop-nav">
           <ul className="nav-menu">
             {menuItems.map((item) =>
               item.dropdown ? (
@@ -94,7 +114,68 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+
+        {/* Mobile Hamburger Button */}
+        <HamburgerButton isOpen={mobileMenuOpen} onClick={handleMobileMenuToggle} />
       </div>
+
+      {/* Mobile Navigation */}
+      <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-nav-header">
+          <HamburgerButton isOpen={mobileMenuOpen} onClick={handleMobileMenuToggle} />
+        </div>
+        <ul className="mobile-menu">
+          {menuItems.map((item) =>
+            item.dropdown ? (
+              <li key={item.label} className="mobile-nav-item has-dropdown">
+                <button
+                  className={`mobile-nav-link mobile-dropdown-toggle ${mobileDropdownOpen ? 'active' : ''}`}
+                  onClick={handleMobileDropdownToggle}
+                >
+                  {item.label}
+                  <span className="dropdown-arrow">▼</span>
+                </button>
+                <ul className={`mobile-dropdown-menu ${mobileDropdownOpen ? 'open' : ''}`}>
+                  {item.dropdown.map((subItem) => (
+                    <li key={subItem.path}>
+                      <NavLink
+                        to={subItem.path}
+                        className={({ isActive }) =>
+                          `mobile-dropdown-link ${isActive ? 'active' : ''}`
+                        }
+                        onClick={handleMobileMenuClose}
+                      >
+                        {subItem.label}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li key={item.path} className="mobile-nav-item">
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `mobile-nav-link ${isActive ? 'active' : ''}`
+                  }
+                  onClick={handleMobileMenuClose}
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            )
+          )}
+          <li className="mobile-nav-item">
+            <NavLink
+              to="/login"
+              className="mobile-nav-link mobile-login-btn"
+              onClick={handleMobileMenuClose}
+            >
+              LOGIN
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
