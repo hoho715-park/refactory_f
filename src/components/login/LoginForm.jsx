@@ -1,6 +1,7 @@
 // src/components/login/LoginForm.jsx
 
 import { useState } from 'react';
+import eyeIcon from '../../assets/login/login_eye.png';
 
 const LoginForm = ({ onLogin, isAnimating }) => {
   const [id, setId] = useState('');
@@ -52,7 +53,7 @@ const LoginForm = ({ onLogin, isAnimating }) => {
               onClick={togglePasswordVisibility}
               disabled={isAnimating}
             >
-              {showPassword ? '🙈' : '👁'}
+              <img src={eyeIcon} alt="Toggle password visibility" className="password-eye-icon" />
             </button>
           </div>
         </div>
