@@ -222,31 +222,41 @@
   }
 
   .login-left {
-    width: 100%;
-    height: 35vh;
+    display: none;
   }
 
   .login-right {
     width: 100%;
-    height: 65vh;
-    padding: 24px;
+    height: 100vh;
+    padding: 40px 24px;
+    justify-content: center;
+    align-items: center;
   }
 
   .login-logo-text {
-    top: 20px;
-    left: 20px;
-    width: 150px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 180px;
+    margin-bottom: 40px;
   }
 
   .login-form-container {
-    margin-top: 100px;
+    margin-top: 0;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .login-form-title {
+    text-align: center;
   }
 
   .login-watermark {
-    width: 70%;
+    width: 60%;
+    opacity: 0.3;
   }
 
-  .login-container.animating .login-left {
-    height: 100vh;
+  .login-container.animating .login-right {
+    opacity: 0;
   }
 }
