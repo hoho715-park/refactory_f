@@ -30,6 +30,8 @@ const LoginForm = ({ onLogin, isAnimating }) => {
             value={id}
             onChange={(e) => setId(e.target.value)}
             disabled={isAnimating}
+            data-lpignore="true"
+            autoComplete="off"
           />
         </div>
         <div className="login-input-group">
@@ -41,6 +43,8 @@ const LoginForm = ({ onLogin, isAnimating }) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               disabled={isAnimating}
+              data-lpignore="true"
+              autoComplete="new-password"
             />
             <button
               type="button"
