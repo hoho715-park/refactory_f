@@ -37,28 +37,30 @@
 }
 
 .hero-button {
-  display: inline-block;
-  padding: 16px 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 32px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 500;
-  color: #333333;
-  background-color: #ffffff;
+  font-weight: 400;
+  color: #222222;
+  background-color: #F5F5F5;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .hero-button:active {
   transform: translateY(0);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Responsive */
