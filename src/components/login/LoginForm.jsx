@@ -22,7 +22,7 @@ const LoginForm = ({ onLogin, isAnimating }) => {
   return (
     <div className="login-form-container">
       <h2 className="login-form-title">Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} data-lpignore="true" autoComplete="off">
         <div className="login-input-group">
           <input
             type="text"
@@ -32,6 +32,7 @@ const LoginForm = ({ onLogin, isAnimating }) => {
             onChange={(e) => setId(e.target.value)}
             disabled={isAnimating}
             data-lpignore="true"
+            data-form-type="other"
             autoComplete="off"
           />
         </div>
@@ -45,7 +46,8 @@ const LoginForm = ({ onLogin, isAnimating }) => {
               onChange={(e) => setPassword(e.target.value)}
               disabled={isAnimating}
               data-lpignore="true"
-              autoComplete="new-password"
+              data-form-type="other"
+              autoComplete="off"
             />
             <button
               type="button"

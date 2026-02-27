@@ -1,5 +1,18 @@
 /* src/components/login/login.css */
 
+/* Hide LastPass and other password manager icons */
+.login-input-group [data-lastpass-icon-root],
+.login-input-group div[data-lastpass-root],
+.login-input-group [data-lastpass-infield="true"],
+.password-input-wrapper [data-lastpass-icon-root],
+.password-input-wrapper div[data-lastpass-root],
+.password-input-wrapper [data-lastpass-infield="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .login-container {
   display: flex;
   width: 100%;
