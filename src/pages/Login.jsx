@@ -1,11 +1,9 @@
 // src/pages/Login.jsx
 
+import LoginLayout from '../components/login/LoginLayout';
+
 const Login = () => {
-  return (
-    <div className="page-container">
-      <h1>Login Page (Dummy)</h1>
-    </div>
-  );
+  return <LoginLayout />;
 };
 
 export default Login;
