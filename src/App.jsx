@@ -1,6 +1,6 @@
 // src/App.jsx
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,9 +12,12 @@ import Login from "./pages/Login";
 import "./App.css";
 
 function App() {
+  const location = useLocation();
+  const hideHeader = location.pathname === "/login";
+
   return (
     <>
-      <Header />
+      {!hideHeader && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
