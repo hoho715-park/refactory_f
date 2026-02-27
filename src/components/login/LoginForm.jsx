@@ -55,7 +55,7 @@ const LoginForm = ({ onLogin, isAnimating }) => {
         <span className="recover-password">Recover Password ?</span>
         <button
           type="submit"
-          className="login-btn"
+          className="login-submit-btn"
           disabled={isAnimating || !id.trim() || !password.trim()}
         >
           Login

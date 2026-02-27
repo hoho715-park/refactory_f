@@ -134,7 +134,7 @@
   color: #4461F2;
 }
 
-.login-btn {
+.login-form-container .login-submit-btn {
   width: 100%;
   padding: 16px;
   font-family: 'Inter', sans-serif;
@@ -149,16 +149,16 @@
   margin-bottom: 12px;
 }
 
-.login-btn:hover:not(:disabled) {
+.login-form-container .login-submit-btn:hover:not(:disabled) {
   background-color: #3451e2;
 }
 
-.login-btn:disabled {
+.login-form-container .login-submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.signup-btn {
+.login-form-container .login-form-container .signup-btn {
   width: 100%;
   padding: 16px;
   font-family: 'Inter', sans-serif;
@@ -172,7 +172,7 @@
   transition: background-color 0.2s ease;
 }
 
-.signup-btn:hover {
+.login-form-container .signup-btn:hover {
   background-color: #eeeeee;
 }
 
