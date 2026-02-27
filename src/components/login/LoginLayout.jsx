@@ -1,6 +1,7 @@
 // src/components/login/LoginLayout.jsx
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import LoginForm from './LoginForm';
 import loginMainImage from '../../assets/login/login_main.png';
 import loginTextImage from '../../assets/login/login_text.png';
@@ -28,12 +29,14 @@ const LoginLayout = () => {
 
       {/* Right Section - Login Form */}
       <div className="login-right">
-        {/* Logo Text (top left) */}
-        <img
-          src={loginTextImage}
-          alt="RE:FACTORY"
-          className="login-logo-text"
-        />
+        {/* Logo Text (top left) - Link to Home */}
+        <Link to="/" className="login-logo-link">
+          <img
+            src={loginTextImage}
+            alt="RE:FACTORY"
+            className="login-logo-text"
+          />
+        </Link>
 
         {/* Login Form */}
         <LoginForm onLogin={handleLogin} isAnimating={isAnimating} />

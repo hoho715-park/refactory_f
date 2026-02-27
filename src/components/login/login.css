@@ -49,12 +49,22 @@
 }
 
 /* Logo Text (top left) */
-.login-logo-text {
+.login-logo-link {
   position: absolute;
   top: 40px;
   left: 40px;
+  z-index: 2;
+}
+
+.login-logo-text {
   width: 200px;
   height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.login-logo-link:hover .login-logo-text {
+  opacity: 0.8;
 }
 
 /* Watermark Logo (bottom right) */
@@ -82,7 +92,7 @@
   font-size: 24px;
   font-weight: 700;
   color: #222222;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .login-input-group {
@@ -102,6 +112,7 @@
   box-sizing: border-box;
   outline: none;
   transition: box-shadow 0.2s ease;
+  caret-color: #4461F2;
 }
 
 .login-input::placeholder {
@@ -233,12 +244,15 @@
     align-items: center;
   }
 
-  .login-logo-text {
+  .login-logo-link {
     position: relative;
     top: auto;
     left: auto;
-    width: 180px;
     margin-bottom: 40px;
+  }
+
+  .login-logo-text {
+    width: 180px;
   }
 
   .login-form-container {
