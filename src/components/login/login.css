@@ -18,25 +18,40 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  gap: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Left Section - Background Image */
 .login-left {
-  width: 45%;
+  flex: 0 0 50%;
+  width: 50%;
   height: 100%;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #D1E6F2;
+  border: none;
+  outline: none;
 }
 
 .login-left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Right Section - Login Form */
 .login-right {
   position: relative;
-  width: 55%;
+  flex: 0 0 50%;
+  width: 50%;
   height: 100%;
   background-color: #D1E6F2;
   display: flex;
@@ -46,6 +61,10 @@
   padding: 40px;
   box-sizing: border-box;
   overflow: hidden;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-left: none;
 }
 
 /* Logo Text (top left) */
