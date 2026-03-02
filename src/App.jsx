@@ -9,11 +9,12 @@ import SubMenu1 from "./pages/SubMenu1";
 import SubMenu2 from "./pages/SubMenu2";
 import SubMenu3 from "./pages/SubMenu3";
 import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import "./App.css";
 
 function App() {
   const location = useLocation();
-  const hideHeader = location.pathname === "/login";
+  const hideHeader = location.pathname === "/login" || location.pathname === "/signup";
 
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/more/sub2" element={<SubMenu2 />} />
         <Route path="/more/sub3" element={<SubMenu3 />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>
   );
