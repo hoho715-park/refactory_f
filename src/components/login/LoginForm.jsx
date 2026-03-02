@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import eyeIcon from '../../assets/login/login_eye.png';
 
-const LoginForm = ({ onLogin, isAnimating }) => {
+const LoginForm = ({ onLogin, onSignUp, isAnimating }) => {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -70,6 +70,7 @@ const LoginForm = ({ onLogin, isAnimating }) => {
         <button
           type="button"
           className="signup-btn"
+          onClick={onSignUp}
           disabled={isAnimating}
         >
           Sign Up
