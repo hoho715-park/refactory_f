@@ -61,8 +61,7 @@
   align-items: center;
   padding: 40px;
   box-sizing: border-box;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
   border: none;
   outline: none;
@@ -221,6 +220,8 @@
   width: 100%;
   align-items: center;
   padding: 40px 80px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Logo moves to top-left (same size) */
