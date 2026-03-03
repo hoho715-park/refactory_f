@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginForm from './LoginForm';
 import SignUpForm from '../signup/SignUpForm';
+import RecoverPasswordModal from './RecoverPasswordModal';
 import loginMainImage from '../../assets/login/login_main.png';
 import loginTextImage from '../../assets/login/login_text.png';
 import loginLogoImage from '../../assets/login/login_logo.png';
@@ -13,6 +14,7 @@ const LoginLayout = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [currentView, setCurrentView] = useState('login'); // 'login' or 'signup'
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isRecoverModalOpen, setIsRecoverModalOpen] = useState(false);
 
   const handleLogin = () => {
     setIsAnimating(true);
@@ -27,6 +29,14 @@ const LoginLayout = () => {
       setCurrentView('signup');
       setIsTransitioning(false);
     }, 300);
+  };
+
+  const handleRecoverPassword = () => {
+    setIsRecoverModalOpen(true);
+  };
+
+  const handleCloseRecoverModal = () => {
+    setIsRecoverModalOpen(false);
   };
 
   const getContainerClass = () => {
@@ -61,6 +71,7 @@ const LoginLayout = () => {
             <LoginForm
               onLogin={handleLogin}
               onSignUp={handleSignUp}
+              onRecoverPassword={handleRecoverPassword}
               isAnimating={isAnimating || isTransitioning}
             />
           </div>
@@ -92,6 +103,12 @@ const LoginLayout = () => {
           className="login-watermark-left"
         />
       </div>
+
+      {/* Recover Password Modal */}
+      <RecoverPasswordModal
+        isOpen={isRecoverModalOpen}
+        onClose={handleCloseRecoverModal}
+      />
     </div>
   );
 };
