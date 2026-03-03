@@ -118,7 +118,8 @@
 
 /* SignUp Header */
 .signup-header {
-  margin-bottom: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .signup-title {
