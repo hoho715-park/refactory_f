@@ -29,13 +29,6 @@ const LoginLayout = () => {
     }, 300);
   };
 
-  const handleBackToLogin = () => {
-    setIsTransitioning(false);
-    setTimeout(() => {
-      setCurrentView('login');
-    }, 300);
-  };
-
   const getContainerClass = () => {
     let classes = 'login-container';
     if (isAnimating) classes += ' animating';
@@ -82,9 +75,6 @@ const LoginLayout = () => {
               </p>
             </div>
             <SignUpForm isAnimating={isTransitioning} />
-            <button className="back-to-login-btn" onClick={handleBackToLogin}>
-              로그인으로 돌아가기
-            </button>
           </div>
         </div>
 
