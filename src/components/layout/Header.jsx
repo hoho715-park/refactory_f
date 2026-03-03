@@ -13,9 +13,9 @@ const menuItems = [
     label: 'More',
     path: null,
     dropdown: [
-      { label: 'Sub Menu 1', path: '/more/sub1' },
-      { label: 'Sub Menu 2', path: '/more/sub2' },
-      { label: 'Sub Menu 3', path: '/more/sub3' },
+      { label: 'FAQ', path: '/more/faq' },
+      { label: 'Community', path: '/more/community' },
+      { label: 'Contact Us', path: '/more/contact' },
     ],
   },
 ];
