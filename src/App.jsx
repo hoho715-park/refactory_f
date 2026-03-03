@@ -5,9 +5,9 @@ import Header from "./components/layout/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import CodeInsight from "./pages/CodeInsight";
-import SubMenu1 from "./pages/SubMenu1";
-import SubMenu2 from "./pages/SubMenu2";
-import SubMenu3 from "./pages/SubMenu3";
+import FAQ from "./pages/FAQ";
+import Community from "./pages/Community";
+import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import "./App.css";
@@ -23,9 +23,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/code-insight" element={<CodeInsight />} />
-        <Route path="/more/sub1" element={<SubMenu1 />} />
-        <Route path="/more/sub2" element={<SubMenu2 />} />
-        <Route path="/more/sub3" element={<SubMenu3 />} />
+        <Route path="/more/faq" element={<FAQ />} />
+        <Route path="/more/community" element={<Community />} />
+        <Route path="/more/contact" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
