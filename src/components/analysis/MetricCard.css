@@ -1,0 +1,124 @@
+/* src/components/analysis/MetricCard.css */
+
+.metric-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.metric-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.metric-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 16px 0;
+}
+
+.metric-score-section {
+  margin-bottom: 16px;
+}
+
+.metric-score {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.score-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.score-max {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9CA3AF;
+}
+
+/* 미니 프로그레스 바 */
+.metric-progress-bar {
+  height: 6px;
+  background-color: #E5E7EB;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.metric-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s ease-out;
+}
+
+.metric-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6C737F;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 상태별 보더 */
+.metric-card-good {
+  border-left: 4px solid #4CAF50;
+}
+
+.metric-card-warning {
+  border-left: 4px solid #FF9800;
+}
+
+.metric-card-danger {
+  border-left: 4px solid #F44336;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .metric-card {
+    padding: 20px;
+  }
+
+  .metric-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .score-value {
+    font-size: 28px;
+  }
+}

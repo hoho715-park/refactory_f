@@ -1,0 +1,180 @@
+/* src/components/analysis/WarningList.css */
+
+.warning-list-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.warning-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.warning-list-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0;
+}
+
+.warning-counts {
+  display: flex;
+  gap: 8px;
+}
+
+.count-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.count-error {
+  background-color: #F44336;
+}
+
+.count-warning {
+  background-color: #FF9800;
+}
+
+.count-info {
+  background-color: #2196F3;
+}
+
+/* 경고 리스트 */
+.warning-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.warning-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #F9FAFB;
+  transition: background-color 0.2s ease;
+}
+
+.warning-item:hover {
+  background-color: #F3F4F6;
+}
+
+.warning-error {
+  border-left: 3px solid #F44336;
+}
+
+.warning-warning {
+  border-left: 3px solid #FF9800;
+}
+
+.warning-info {
+  border-left: 3px solid #2196F3;
+}
+
+.warning-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.warning-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.warning-location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.warning-file {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4461F2;
+}
+
+.warning-line {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9CA3AF;
+  background-color: #E5E7EB;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.warning-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #374151;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.warning-severity-badge {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* 빈 상태 */
+.warning-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  color: #10B981;
+  margin-bottom: 16px;
+}
+
+.empty-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #10B981;
+  margin: 0;
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .warning-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .warning-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .warning-severity-badge {
+    align-self: flex-start;
+  }
+}
