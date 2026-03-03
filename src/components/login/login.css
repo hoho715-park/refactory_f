@@ -216,16 +216,12 @@
   padding: 40px 80px;
 }
 
-/* Logo moves to top-left and becomes smaller */
+/* Logo moves to top-left (same size) */
 .login-container.signup-mode .login-logo-link {
   position: absolute;
   top: 40px;
   left: 80px;
   transform: translateX(0);
-}
-
-.login-container.signup-mode .login-logo-text {
-  width: 120px;
 }
 
 /* SignUp Header becomes visible */
