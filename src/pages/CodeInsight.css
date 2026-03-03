@@ -1,0 +1,212 @@
+/* src/pages/CodeInsight.css */
+
+.code-insight-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+  padding: 120px 24px 60px;
+  box-sizing: border-box;
+}
+
+.code-insight-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+.code-insight-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.code-insight-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 16px 0;
+}
+
+.code-insight-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6C737F;
+  margin: 0;
+}
+
+/* Upload Method Section */
+.upload-method-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+/* Upload Cards */
+.upload-method-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.upload-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid #E0E0E0;
+  border-radius: 16px;
+  padding: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.upload-card:hover {
+  border-color: #4461F2;
+  box-shadow: 0 8px 24px rgba(68, 97, 242, 0.12);
+  transform: translateY(-4px);
+}
+
+.upload-card.selected {
+  border-color: #4461F2;
+  background-color: rgba(68, 97, 242, 0.04);
+  box-shadow: 0 8px 24px rgba(68, 97, 242, 0.15);
+}
+
+.upload-card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background-color: #F5F7FA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6C737F;
+  transition: all 0.3s ease;
+}
+
+.upload-card:hover .upload-card-icon,
+.upload-card.selected .upload-card-icon {
+  background-color: #4461F2;
+  color: #ffffff;
+}
+
+.upload-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 12px 0;
+}
+
+.upload-card-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6C737F;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.upload-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.upload-card-features li {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6C737F;
+  padding: 8px 0;
+  border-top: 1px solid #F0F0F0;
+  position: relative;
+  padding-left: 24px;
+}
+
+.upload-card-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #E8F5E9;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M2 5L4 7L8 3' stroke='%234CAF50' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.selected-indicator {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* Actions */
+.code-insight-actions {
+  text-align: center;
+}
+
+.continue-btn {
+  padding: 16px 64px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #BDBDBD;
+  border: none;
+  border-radius: 8px;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+.continue-btn.active {
+  background-color: #4461F2;
+  cursor: pointer;
+}
+
+.continue-btn.active:hover {
+  background-color: #3451e2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(68, 97, 242, 0.3);
+}
+
+.continue-btn:disabled {
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .code-insight-page {
+    padding: 100px 16px 40px;
+  }
+
+  .code-insight-title {
+    font-size: 32px;
+  }
+
+  .upload-method-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .upload-card {
+    padding: 24px;
+  }
+
+  .continue-btn {
+    width: 100%;
+    padding: 16px 24px;
+  }
+}
