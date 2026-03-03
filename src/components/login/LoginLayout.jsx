@@ -25,6 +25,7 @@ const LoginLayout = () => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentView('signup');
+      setIsTransitioning(false);
     }, 300);
   };
 
