@@ -205,7 +205,7 @@
 .login-container.signup-mode .login-right {
   flex: 0 0 100%;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
   padding: 40px 80px;
 }
 
@@ -213,16 +213,17 @@
 .login-container.signup-mode .login-logo-link {
   position: absolute;
   top: 40px;
-  left: 80px;
-  transform: translateX(0);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
 /* Content Area adjusts */
 .login-container.signup-mode .login-content-area {
   max-width: 600px;
-  margin-top: 200px;
-  margin-left: 0;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Watermark adjusts */
