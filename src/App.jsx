@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import CodeInsight from "./pages/CodeInsight";
 import ZipUpload from "./pages/ZipUpload";
+import AnalysisPage from "./pages/AnalysisPage";
 import FAQ from "./pages/FAQ";
 import Community from "./pages/Community";
 import ContactUs from "./pages/ContactUs";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/code-insight" element={<CodeInsight />} />
         <Route path="/code-insight/zip-upload" element={<ZipUpload />} />
+        <Route path="/code-insight/analysis" element={<AnalysisPage />} />
         <Route path="/more/faq" element={<FAQ />} />
         <Route path="/more/community" element={<Community />} />
         <Route path="/more/contact" element={<ContactUs />} />

@@ -83,8 +83,10 @@ const ZipUpload = () => {
   };
 
   const handleAnalyze = () => {
-    // 분석 페이지로 이동
-    console.log('Start analysis:', uploadedFile?.name);
+    // 분석 페이지로 이동 (파일 정보와 함께)
+    navigate('/code-insight/analysis', {
+      state: { file: uploadedFile }
+    });
   };
 
   const formatFileSize = (bytes) => {
