@@ -103,6 +103,20 @@
   transition: all 0.6s ease-in-out;
 }
 
+/* Watermark Logo (bottom left) - hidden by default */
+.login-watermark-left {
+  position: absolute;
+  bottom: -350px;
+  left: -100px;
+  width: 400px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: scaleX(-1);
+  transition: all 0.6s ease-in-out;
+}
+
 /* SignUp Header */
 .signup-header {
   margin-bottom: 24px;
@@ -229,6 +243,11 @@
 /* Watermark adjusts */
 .login-container.signup-mode .login-watermark {
   width: 400px;
+  opacity: 0.5;
+}
+
+/* Watermark left visible in signup mode */
+.login-container.signup-mode .login-watermark-left {
   opacity: 0.5;
 }
 

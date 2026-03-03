@@ -93,6 +93,13 @@ const LoginLayout = () => {
           alt="Logo Watermark"
           className="login-watermark"
         />
+
+        {/* Watermark Logo (bottom left) - only in signup mode */}
+        <img
+          src={loginLogoImage}
+          alt="Logo Watermark Left"
+          className="login-watermark-left"
+        />
       </div>
     </div>
   );
