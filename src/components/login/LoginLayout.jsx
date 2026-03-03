@@ -60,14 +60,6 @@ const LoginLayout = () => {
           />
         </Link>
 
-        {/* SignUp Header - only visible in signup mode */}
-        <div className="signup-header">
-          <h1 className="signup-title">회원가입</h1>
-          <p className="signup-subtitle">
-            코드를 해부하고 구조를 시각화하고 더 나은 형태로 다시 설계합니다
-          </p>
-        </div>
-
         {/* Content Area */}
         <div className="login-content-area">
           {/* Login Form */}
@@ -81,6 +73,13 @@ const LoginLayout = () => {
 
           {/* SignUp Form */}
           <div className={`signup-form-wrapper ${currentView === 'signup' ? 'active' : 'hidden'}`}>
+            {/* SignUp Header */}
+            <div className="signup-header">
+              <h1 className="signup-title">회원가입</h1>
+              <p className="signup-subtitle">
+                코드를 해부하고 구조를 시각화하고 더 나은 형태로 다시 설계합니다
+              </p>
+            </div>
             <SignUpForm isAnimating={isTransitioning} />
             <button className="back-to-login-btn" onClick={handleBackToLogin}>
               로그인으로 돌아가기
